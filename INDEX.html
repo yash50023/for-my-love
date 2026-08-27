@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>For My Love ❤️</title>
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Segoe UI", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,182,193,0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(210,180,222,0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff7f9,
+            #fce4ec,
+            #f8e8ee
+        );
+
+    color: #3d2430;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    font-size: 20px;
+
+    animation:
+        floatHeart 7s linear forwards;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            0 0 6px
+            rgba(190,24,93,0.3)
+        );
+}
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    50% {
+
+        transform:
+            translateY(-50vh)
+            rotate(180deg)
+            scale(1);
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.2);
+
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.85),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #f8dce7,
+            #eadcf8
+        );
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background:
+        rgba(255,130,170,0.12);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -100px;
+
+    filter: blur(5px);
+
+    animation:
+        floatingBlob 6s ease-in-out infinite;
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background:
+        rgba(180,120,210,0.12);
+
+    border-radius: 50%;
+
+    bottom: -120px;
+    left: -100px;
+
+    animation:
+        floatingBlob 7s ease-in-out infinite reverse;
+}
+
+@keyframes floatingBlob {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+.hero-content {
+
+    max-width: 850px;
+
+    z-index: 2;
+
+    padding: 50px 40px;
+
+    background:
+        rgba(255,255,255,0.48);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(100,30,70,0.15);
+
+    animation:
+        heroAppear 1.2s ease;
+}
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.95);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.small-heart {
+
+    font-size: 60px;
+
+    animation:
+        heartbeat 1.2s infinite;
+
+    filter:
+        drop-shadow(
+            0 5px 12px
+            rgba(194,24,91,0.35)
+        );
+}
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+h1 {
+
+    font-size:
+        clamp(40px,8vw,75px);
+
+    color: #9c2755;
+
+    margin: 15px 0;
+
+    text-shadow:
+        0 4px 15px
+        rgba(156,39,85,0.15);
+}
+
+.hero p {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #573744;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn {
+
+    display: inline-block;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    margin-top: 28px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b83267,
+            #8e2450
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    box-shadow:
+        0 10px 25px
+        rgba(142,36,80,0.25);
+}
+
+.btn:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 15px 35px
+        rgba(142,36,80,0.4);
+}
+
+.btn:active {
+
+    transform:
+        scale(0.97);
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section {
+
+    padding: 90px 20px;
+}
+
+.container {
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.section-title {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #8e2450;
+
+    margin-bottom: 45px;
+
+    position: relative;
+}
+
+.section-title::after {
+
+    content: "♥";
+
+    display: block;
+
+    font-size: 18px;
+
+    color: #c77d9c;
+
+    margin-top: 10px;
+
+    animation:
+        heartbeat 2s infinite;
+}
+
+
+/* =====================================================
+   APOLOGY
+===================================================== */
+
+.apology {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fa,
+            #f8e8ee
+        );
+}
+
+.letter {
+
+    background:
+        rgba(255,255,255,0.75);
+
+    backdrop-filter:
+        blur(12px);
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 20px 50px
+        rgba(100,30,60,0.12);
+
+    line-height: 1.9;
+
+    font-size: 18px;
+
+    color: #4b303b;
+
+    transition:
+        .4s ease;
+}
+
+.letter:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 25px 60px
+        rgba(100,30,60,0.18);
+}
+
+.letter p {
+
+    margin-bottom: 18px;
+}
+
+.letter strong {
+
+    color: #9c2755;
+}
+
+.signature {
+
+    color: #9c2755;
+
+    font-weight: bold;
+
+    font-size: 20px;
+
+    border-top:
+        1px solid #efd3df;
+
+    padding-top: 20px;
+}
+
+
+/* =====================================================
+   LOVE REASONS
+===================================================== */
+
+.reasons-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fdf4f7,
+            #f8edf8
+        );
+}
+
+.reasons-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.card {
+
+    background:
+        rgba(255,255,255,0.65);
+
+    backdrop-filter:
+        blur(12px);
+
+    padding: 32px 22px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 12px 35px
+        rgba(100,30,60,0.09);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    background:
+        rgba(220,120,160,0.12);
+
+    border-radius: 50%;
+
+    top: -60px;
+    right: -60px;
+}
+
+.card:hover {
+
+    transform:
+        translateY(-12px)
+        scale(1.02);
+
+    background:
+        rgba(255,255,255,0.92);
+
+    box-shadow:
+        0 20px 45px
+        rgba(100,30,60,0.16);
+}
+
+.card .emoji {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+    transition:
+        .3s;
+}
+
+.card:hover .emoji {
+
+    transform:
+        scale(1.2)
+        rotate(5deg);
+}
+
+.card h3 {
+
+    color: #9c2755;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+
+    line-height: 1.7;
+
+    color: #59404a;
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+.memories {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7edf8,
+            #fff3f7
+        );
+}
+
+.memory-box {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        rgba(255,255,255,0.55);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(80,30,70,0.08);
+}
+
+.memory-box p {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #513745;
+}
+
+.memory-box strong {
+
+    color: #9c2755;
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   FORGIVENESS
+===================================================== */
+
+.forgive {
+
+    text-align: center;
+
+    min-height: 75vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #f9e0eb,
+            #edd8e5,
+            #e7d8ed
+        );
+}
+
+.forgive-box {
+
+    max-width: 700px;
+
+    width: 100%;
+
+    padding: 45px 30px;
+
+    background:
+        rgba(255,255,255,0.5);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(90,30,70,0.13);
+}
+
+.forgive-box h2 {
+
+    font-size:
+        clamp(35px,7vw,60px);
+
+    color: #8e2450;
+
+    margin-bottom: 20px;
+}
+
+.forgive-box p {
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #563743;
+
+    margin-bottom: 8px;
+}
+
+.buttons {
+
+    position: relative;
+
+    min-height: 130px;
+
+    margin-top: 20px;
+}
+
+.yes-btn,
+.no-btn {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    margin: 10px;
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+}
+
+.yes-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #b83267,
+            #8e2450
+        );
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(142,36,80,0.25);
+}
+
+.yes-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    box-shadow:
+        0 15px 35px
+        rgba(142,36,80,0.4);
+}
+
+.no-btn {
+
+    background:
+        rgba(255,255,255,0.9);
+
+    color: #8e2450;
+
+    border:
+        2px solid #b83267;
+}
+
+
+/* =====================================================
+   SURPRISE
+===================================================== */
+
+#surprise {
+
+    display: none;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 20%,
+            #d45b86,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #7b2550,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #751d45,
+            #42152d
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.surprise-content {
+
+    max-width: 800px;
+
+    padding: 40px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.big-heart {
+
+    font-size: 80px;
+
+    animation:
+        heartbeat 1s infinite;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(255,100,160,0.7)
+        );
+}
+
+.surprise-content h2 {
+
+    font-size:
+        clamp(45px,9vw,80px);
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    text-shadow:
+        0 5px 25px
+        rgba(0,0,0,0.25);
+}
+
+.surprise-content p {
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #ffe8f0;
+}
+
+
+/* =====================================================
+   FINAL LOVE PAGE
+===================================================== */
+
+#lovePage {
+
+    display: none;
+
+    min-height: 100vh;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            #d94b82,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #32091e,
+            #650f38,
+            #3a0925
+        );
+
+    color: white;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.message {
+
+    animation:
+        appear 1.5s ease;
+
+    max-width: 1000px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.message h1 {
+
+    color: white;
+
+    font-size:
+        clamp(40px,7vw,75px);
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 5px 30px
+        rgba(255,100,160,0.35);
+}
+
+.message h2 {
+
+    font-size:
+        clamp(24px,4vw,35px);
+
+    color: #ffe0eb;
+}
+
+.message .heart-big {
+
+    font-size: 100px;
+
+    animation:
+        heartbeat 1s infinite;
+
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 0 30px
+            rgba(255,100,160,0.8)
+        );
+}
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.5)
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: #32101f;
+
+    color: #f8dce7;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:700px) {
+
+    .reasons-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+
+        padding: 28px 22px;
+    }
+
+    section {
+
+        padding: 65px 18px;
+    }
+
+    .hero-content {
+
+        padding: 35px 20px;
+    }
+
+    .memory-box {
+
+        padding: 28px 20px;
+    }
+
+    .forgive-box {
+
+        padding: 35px 20px;
+    }
+
+    .message h1 {
+
+        line-height: 1.2;
+    }
+
+    .message .heart-big {
+
+        font-size: 75px;
+    }
+
+    .surprise-content {
+
+        padding: 25px 18px;
+    }
+
+    .small-heart {
+
+        font-size: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     FLOATING HEART CONTAINER
+===================================================== -->
+
+<div id="hearts"></div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-heart">
+            ❤️
+        </div>
+
+        <h1>
+            Hey My Love...
+        </h1>
+
+        <p>
+
+            I know you're angry with me right now...
+
+            but before you decide to stay angry,
+
+            please give me just a few minutes
+
+            of your heart. 🥺❤️
+
+        </p>
+
+        <a
+            href="#apology"
+            class="btn">
+
+            Open My Heart 💌
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APOLOGY
+===================================================== -->
+
+<section
+    class="apology"
+    id="apology">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            A Little Something From My Heart 💌
+
+        </h2>
+
+
+        <div class="letter">
+
+            <p>
+                My love,
+            </p>
+
+            <p>
+
+                I know you're upset with me,
+
+                and I understand that you're allowed
+
+                to feel that way.
+
+                I don't want to force you to talk to me
+
+                or make your feelings seem unimportant.
+
+            </p>
+
+            <p>
+
+                But I want you to know something...
+
+                <strong>
+                    I genuinely care about you.
+                </strong>
+
+            </p>
+
+            <p>
+
+                Sometimes I may say the wrong thing,
+
+                react the wrong way, or make mistakes
+
+                without realizing how much they can hurt you.
+
+                I'm not perfect,
+
+                but my feelings for you are real.
+
+            </p>
+
+            <p>
+
+                I don't want one misunderstanding
+
+                or one bad moment to create distance
+
+                between us.
+
+            </p>
+
+            <p>
+
+                If I could be beside you right now,
+
+                I would just sit next to you,
+
+                hold your hand and say...
+
+                <strong>
+                    "Let's talk. I don't want to lose us." ❤️
+                </strong>
+
+            </p>
+
+            <p>
+
+                I'm not asking you to forget everything
+
+                immediately.
+
+                I'm only asking you to remember
+
+                how much you mean to me.
+
+            </p>
+
+            <p class="signature">
+
+                I'm sorry, my love. ❤️
+
+                <br>
+
+                Please don't stay angry with me
+
+                for too long. 🥺
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REASONS
+===================================================== -->
+
+<section class="reasons-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Things I Love About You ❤️
+
+        </h2>
+
+
+        <div class="reasons-grid">
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    🥰
+                </div>
+
+                <h3>
+                    Your Smile
+                </h3>
+
+                <p>
+
+                    Your smile can change
+
+                    my entire mood.
+
+                    So please smile again. ❤️
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    🫶
+                </div>
+
+                <h3>
+                    Your Care
+                </h3>
+
+                <p>
+
+                    I love the way you care
+
+                    about me,
+
+                    even when you pretend
+
+                    you don't. 🥺
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    🤭
+                </div>
+
+                <h3>
+                    Your Cute Side
+                </h3>
+
+                <p>
+
+                    Even when you're angry,
+
+                    somewhere inside you're
+
+                    still my cute person. ❤️
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    😂
+                </div>
+
+                <h3>
+                    Our Laughs
+                </h3>
+
+                <p>
+
+                    I miss our random conversations,
+
+                    silly jokes and those moments
+
+                    that make no sense.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    🌎
+                </div>
+
+                <h3>
+                    Our Bond
+                </h3>
+
+                <p>
+
+                    Distance or difficult days
+
+                    don't change how important
+
+                    you are to me.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="emoji">
+                    ❤️
+                </div>
+
+                <h3>
+                    Simply You
+                </h3>
+
+                <p>
+
+                    I don't need a perfect person.
+
+                    I just want you.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section class="memories">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Remember Us? 🥺❤️
+
+        </h2>
+
+
+        <div class="memory-box">
+
+            <p>
+
+                Remember all those silly conversations?
+
+                The random "good morning" messages?
+
+                The late-night talks?
+
+                The moments when we laughed over
+
+                absolutely nothing?
+
+            </p>
+
+            <br>
+
+            <p>
+
+                I don't want one bad moment to become
+
+                bigger than all those beautiful moments
+
+                we've shared.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                <strong>
+                    I choose us. ❤️
+                </strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FORGIVENESS
+===================================================== -->
+
+<section
+    class="forgive"
+    id="forgive">
+
+    <div class="forgive-box">
+
+        <h2>
+            Can You Forgive Me? 🥺
+        </h2>
+
+        <p>
+
+            I promise I'm not asking for everything
+
+            to become perfect instantly.
+
+        </p>
+
+        <p>
+
+            Just give your girl one little chance
+
+            to make you smile again. ❤️
+
+        </p>
+
+
+        <div class="buttons">
+
+            <button
+                class="yes-btn"
+                onclick="forgiveMe()">
+
+                Okay, I Forgive You ❤️
+
+            </button>
+
+
+            <button
+                class="no-btn"
+                id="noBtn">
+
+                No 😤
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SURPRISE PAGE
+===================================================== -->
+
+<section id="surprise">
+
+    <div class="surprise-content">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <h2>
+            YUPPPPPPPPPPP! 🥹❤️
+        </h2>
+
+        <p>
+            Thank you for giving us another chance.
+        </p>
+
+        <p>
+            Now come here... 🤗
+        </p>
+
+        <p>
+            No more being angry, okay? 😭😂
+        </p>
+
+        <br>
+
+        <p>
+
+            <strong>
+
+                I love you more than all the words
+
+                I could ever put on this website. ❤️
+
+            </strong>
+
+        </p>
+
+
+        <button
+            class="btn"
+            onclick="loveExplosion()">
+
+            One More Surprise 💕
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL LOVE PAGE
+===================================================== -->
+
+<section id="lovePage">
+
+    <div class="message">
+
+        <div class="heart-big">
+            ❤️
+        </div>
+
+        <h1>
+
+            ❤️ I LOVE YOU SOOO MUCH! ❤️
+
+        </h1>
+
+        <h2>
+
+            Now please smile for me. 🥺💕
+
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    Made with ❤️ especially for you.
+
+</footer>
+
+
+<script>
+
+
+/* =====================================================
+   HEART SYMBOLS
+===================================================== */
+
+const heartSymbols = [
+
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💓",
+    "💘",
+    "🥰",
+    "💞",
+    "💝"
+
+];
+
+const heartContainer =
+    document.getElementById("hearts");
+
+
+/* =====================================================
+   CREATE FLOATING HEART
+===================================================== */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        heartSymbols[
+            Math.floor(
+                Math.random() *
+                heartSymbols.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    heartContainer.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 10000);
+
+}
+
+
+/* Create hearts continuously */
+
+setInterval(
+    createHeart,
+    450
+);
+
+
+/* =====================================================
+   RUN-AWAY NO BUTTON
+===================================================== */
+
+const noBtn =
+    document.getElementById("noBtn");
+
+
+noBtn.addEventListener(
+    "mouseenter",
+    moveButton
+);
+
+noBtn.addEventListener(
+    "touchstart",
+    moveButton,
+    { passive: true }
+);
+
+
+function moveButton(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+
+    const buttonWidth =
+        noBtn.offsetWidth;
+
+    const buttonHeight =
+        noBtn.offsetHeight;
+
+
+    const maxX =
+        Math.max(
+            10,
+            window.innerWidth -
+            buttonWidth -
+            20
+        );
+
+    const maxY =
+        Math.max(
+            10,
+            window.innerHeight -
+            buttonHeight -
+            20
+        );
+
+
+    const randomX =
+        Math.random() * maxX;
+
+    const randomY =
+        Math.random() * maxY;
+
+
+    noBtn.style.position =
+        "fixed";
+
+    noBtn.style.left =
+        randomX + "px";
+
+    noBtn.style.top =
+        randomY + "px";
+
+    noBtn.style.zIndex =
+        "9999";
+
+}
+
+
+/* =====================================================
+   FORGIVENESS
+===================================================== */
+
+function forgiveMe() {
+
+    const forgive =
+        document.querySelector(".forgive");
+
+    forgive.style.display =
+        "none";
+
+
+    const surprise =
+        document.getElementById("surprise");
+
+    surprise.style.display =
+        "flex";
+
+
+    createExplosion();
+
+
+    setTimeout(() => {
+
+        surprise.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 100);
+
+}
+
+
+/* =====================================================
+   HEART EXPLOSION
+===================================================== */
+
+function createExplosion() {
+
+    for (
+        let i = 0;
+        i < 70;
+        i++
+    ) {
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.innerHTML =
+            heartSymbols[
+                Math.floor(
+                    Math.random() *
+                    heartSymbols.length
+                )
+            ];
+
+
+        heart.style.position =
+            "fixed";
+
+
+        heart.style.left =
+            "50%";
+
+
+        heart.style.top =
+            "50%";
+
+
+        heart.style.fontSize =
+            (15 +
+             Math.random() * 35)
+            + "px";
+
+
+        heart.style.zIndex =
+            "99999";
+
+
+        heart.style.pointerEvents =
+            "none";
+
+
+        const x =
+            (Math.random() - 0.5) *
+            window.innerWidth *
+            1.2;
+
+
+        const y =
+            (Math.random() - 0.5) *
+            window.innerHeight *
+            1.2;
+
+
+        const rotation =
+            Math.random() * 720 - 360;
+
+
+        heart.animate(
+
+            [
+
+                {
+
+                    transform:
+                        "translate(-50%, -50%) scale(0)",
+
+                    opacity: 1
+
+                },
+
+                {
+
+                    transform:
+                        `translate(${x}px, ${y}px)
+                         rotate(${rotation}deg)
+                         scale(1.3)`,
+
+                    opacity: 0
+
+                }
+
+            ],
+
+            {
+
+                duration:
+                    1500 +
+                    Math.random() * 1200,
+
+                easing:
+                    "cubic-bezier(.17,.67,.35,1)"
+
+            }
+
+        );
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 3000);
+
+    }
+
+}
+
+
+/* =====================================================
+   FINAL SURPRISE
+===================================================== */
+
+function loveExplosion() {
+
+    createExplosion();
+
+
+    setTimeout(() => {
+
+        document
+            .querySelectorAll(
+                "body > section, footer"
+            )
+            .forEach(element => {
+
+                element.style.display =
+                    "none";
+
+            });
+
+
+        const lovePage =
+            document.getElementById(
+                "lovePage"
+            );
+
+
+        lovePage.style.display =
+            "flex";
+
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+
+        /* Extra heart burst */
+
+        setTimeout(
+            createExplosion,
+            400
+        );
+
+
+    }, 700);
+
+}
+
+
+/* =====================================================
+   CARD TILT EFFECT
+===================================================== */
+
+const cards =
+    document.querySelectorAll(".card");
+
+
+cards.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        (event) => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            const x =
+                event.clientX -
+                rect.left;
+
+
+            const y =
+                event.clientY -
+                rect.top;
+
+
+            const centerX =
+                rect.width / 2;
+
+
+            const centerY =
+                rect.height / 2;
+
+
+            const rotateX =
+                (y - centerY) / 18;
+
+
+            const rotateY =
+                (centerX - x) / 18;
+
+
+            card.style.transform =
+                `perspective(700px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-8px)
+                 scale(1.02)`;
+
+        }
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform =
+                "";
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   BUTTON CLICK RIPPLE
+===================================================== */
+
+document
+    .querySelectorAll(
+        ".btn, .yes-btn"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function(event) {
+
+                const ripple =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                ripple.style.position =
+                    "absolute";
+
+
+                ripple.style.width =
+                    "10px";
+
+
+                ripple.style.height =
+                    "10px";
+
+
+                ripple.style.borderRadius =
+                    "50%";
+
+
+                ripple.style.background =
+                    "rgba(255,255,255,0.5)";
+
+
+                ripple.style.pointerEvents =
+                    "none";
+
+
+                ripple.style.left =
+                    event.offsetX + "px";
+
+
+                ripple.style.top =
+                    event.offsetY + "px";
+
+
+                ripple.animate(
+
+                    [
+
+                        {
+                            transform:
+                                "scale(1)",
+
+                            opacity: 0.8
+                        },
+
+                        {
+                            transform:
+                                "scale(25)",
+
+                            opacity: 0
+                        }
+
+                    ],
+
+                    {
+
+                        duration: 600
+
+                    }
+
+                );
+
+            }
+        );
+
+    });
+
+
+</script>
+
+</body>
+
+</html>
